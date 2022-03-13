@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <!-- font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@100;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- css -->
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <title>Frontend Mentor | Calculator app</title>
+</head>
+
+<body data-theme="theme1">
+  <main id="main">
+    <article id="calculator">
+      <header id="header">
+        <h1 data-theme="theme1" class="header__title">calc</h1>
+        <div data-theme="theme1" class="header__change-theme">
+          <span data-theme="theme1" class="header__change-theme__title">THEME</span>
+          <div data-theme="theme1" class="header__change-theme__options">
+            <button data-theme="theme1" class="header__change-theme__options__button" onclick="changeTheme('theme1')">1</button>
+            <button data-theme="theme1" class="header__change-theme__options__button" onclick="changeTheme('theme2')">2</button>
+            <button data-theme="theme1" class="header__change-theme__options__button" onclick="changeTheme('theme3')">3</button>
+
+            <div data-theme="theme1" class="header__change-theme__options__bar"></div>
+          </div>
+      </header>
+
+      <div id="screen">
+        <div data-theme="theme1" class="screen__display">
+          <div data-theme="theme1" class="screen__display__value">0</div>
+        </div>
+      </div>
+
+      <div id="buttons">
+        <div data-theme="theme1" class="button__container">
+          <div data-theme="theme1" class="buttons__row">
+            <button onclick="clicked(this)" data-theme="theme1" class="buttons__row__button" data-value="7">7</button>
+            <button onclick="clicked(this)" data-theme="theme1" class="buttons__row__button" data-value="8">8</button>
+            <button onclick="clicked(this)" data-theme="theme1" class="buttons__row__button" data-value="9">9</button>
+            <button onclick="del()" data-theme="theme1" class="buttons__row__button special-buttons-1" data-value="+">DEL</button>
+          </div>
+
+          <div data-theme="theme1" class="buttons__row">
+            <button onclick="clicked(this)" data-theme="theme1" class="buttons__row__button" data-value="4">4</button>
+            <button onclick="clicked(this)" data-theme="theme1" class="buttons__row__button" data-value="5">5</button>
+            <button onclick="clicked(this)" data-theme="theme1" class="buttons__row__button" data-value="6">6</button>
+            <button onclick="clicked(this)" data-theme="theme1" class="buttons__row__button" data-value="+">+</button>
+          </div>
+
+          <div data-theme="theme1" class="buttons__row">
+            <button onclick="clicked(this)" data-theme="theme1" class="buttons__row__button" data-value="1">1</button>
+            <button onclick="clicked(this)" data-theme="theme1" class="buttons__row__button" data-value="2">2</button>
+            <button onclick="clicked(this)" data-theme="theme1" class="buttons__row__button" data-value="3">3</button>
+            <button onclick="clicked(this)" data-theme="theme1" class="buttons__row__button" data-value="-">-</button>
+          </div>
+
+          <div data-theme="theme1" class="buttons__row">
+            <button onclick="clicked(this)" data-theme="theme1" class="buttons__row__button" data-value=".">.</button>
+            <button onclick="clicked(this)" data-theme="theme1" class="buttons__row__button" data-value="0">0</button>
+            <button onclick="clicked(this)" data-theme="theme1" class="buttons__row__button" data-value="/">/</button>
+            <button onclick="clicked(this)" data-theme="theme1" class="buttons__row__button" data-value="x">x</button>
+          </div>
+
+          <div data-theme="theme1" class="buttons__row special-row">
+            <button onclick="reset()" data-theme="theme1" class="buttons__row__button special-buttons-1">RESET</button>
+            <button onclick="equal()" data-theme="theme1" class="buttons__row__button special-buttons-2">=</button>
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>
